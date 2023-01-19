@@ -26,7 +26,7 @@ jobs:
         run: curl -sSL https://get.wasp-lang.dev/installer.sh | sh
 
       - run: |
-          wasp build
+          wasp db migrate-dev
         name: "Build wasp"
 
       - run: |
