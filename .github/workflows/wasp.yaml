@@ -1,0 +1,74 @@
+name: Wasp
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get branch name
+        id: branch-name
+        uses: tj-actions/branch-names@v5.2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '18'
+
+      - name: Install Wasp
+        run: curl -sSL https://get.wasp-lang.dev/installer.sh | sh
+
+      - run: |
+          wasp build
+        name: "Build wasp"
+
+      - run: |
+          echo asdf
+        name: "Updating generated code"
+
+      - if: ${{ !(github.event_name == 'push' && github.ref == 'refs/heads/master') }}
+        run: exit 0
+
+      - name: Log into registry
+        if: steps.branch-name.outputs.current_branch == 'master'
+        run: echo "${{ secrets.GH_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Push backend image
+        if: steps.branch-name.outputs.current_branch == 'master'
+        run: |
+          WASP_IMAGE_ID=ghcr.io/lunasec-io/damn-vulnerable-js-sca
+          
+          # Change all uppercase to lowercase
+          WASP_IMAGE_ID=$(echo $WASP_IMAGE_ID | tr '[A-Z]' '[a-z]')
+          
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+          
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+          
+          # Use Docker `latest` tag convention
+          [ "$VERSION" == "master" ] && VERSION=latest
+          
+          echo WASP_IMAGE_ID=$WASP_IMAGE_ID
+          echo VERSION=$VERSION
+          
+          docker tag wasp $WASP_IMAGE_ID:$VERSION
+          docker tag wasp $WASP_IMAGE_ID:latest
+          docker push $WASP_IMAGE_ID:$VERSION
+          docker push $WASP_IMAGE_ID:latest
+
+      - name: Create commit
+        id: create-commit
+        if: steps.branch-name.outputs.current_branch == 'master'
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: generated/**
+          commit_message: "chore: update generated files"
