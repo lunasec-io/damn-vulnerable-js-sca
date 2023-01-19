@@ -6,7 +6,7 @@ RUN curl -sSL https://get.wasp-lang.dev/installer.sh | sh
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 
-RUN wasp build
+RUN wasp db migrate-dev
 
 EXPOSE 3000
 EXPOSE 3001
