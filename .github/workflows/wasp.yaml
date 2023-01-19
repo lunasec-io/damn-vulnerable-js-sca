@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - "master"
+      - "*"
 
 jobs:
   build:
@@ -30,7 +30,8 @@ jobs:
         name: "Build wasp"
 
       - run: |
-          echo asdf
+          rm -rf ./generated
+          cp -r .wasp/ ./generated
         name: "Updating generated code"
 
       - if: ${{ !(github.event_name == 'push' && github.ref == 'refs/heads/master') }}
@@ -39,6 +40,10 @@ jobs:
       - name: Log into registry
         if: steps.branch-name.outputs.current_branch == 'master'
         run: echo "${{ secrets.GH_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Build Wasp Docker Container
+        run: |
+          docker build . -t wasp
 
       - name: Push backend image
         if: steps.branch-name.outputs.current_branch == 'master'
