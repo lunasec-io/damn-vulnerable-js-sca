@@ -1,0 +1,47 @@
+app damnVulnerableJsSca {
+  wasp: {
+    version: "^0.8.0"
+  },
+  title: "damn-vulnerable-js-sca",
+  auth: {
+    // Expects entity User to have (username:String) and (password:String) fields.
+    userEntity: User,
+    methods: {
+      // We also support Google, with more on the way!
+      usernameAndPassword: {}
+    },
+    // We'll see how this is used a bit later
+    onAuthFailedRedirectTo: "/login"
+  },
+
+  dependencies: [
+    ("baseui", "12.2.0"),
+    ("styletron-engine-atomic", "1.5.0"),
+    ("styletron-react", "6.1.0"),
+    ("react-markdown", "^8.0.5"),
+
+    // Intentionally vulnerable libraries
+    ("systeminformation", "5.0.0"),
+  ],
+}
+
+entity User {=psl
+  id       String   @id @unique @default(cuid())
+  username String  @unique
+  password String
+psl=}
+
+route RootRoute { path: "/", to: MainPage }
+page MainPage {
+  component: import Main from "@client/MainPage"
+}
+
+route RootRoute { path: "/vulnerability/cve-2021-21315", to: CVE202121315Page }
+page CVE202121315Page {
+  component: import CVE202121315Page from "@client/vulnerability/CVE202121315Page"
+}
+
+action exploitCVE202121315 {
+  fn: import { exploitCVE202121315 } from "@server/actions.js",
+  entities: []
+}
