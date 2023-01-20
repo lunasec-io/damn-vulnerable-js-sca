@@ -1,9 +1,0 @@
-{
-  "env": {
-    "NODE_ENV": "development"
-  },
-  "watch": [
-    "src/"
-  ],
-  "ext": "ts,mts,js,mjs,json"
-}

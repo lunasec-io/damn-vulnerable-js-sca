@@ -28,12 +28,15 @@ jobs:
         run: curl -sSL https://get.wasp-lang.dev/installer.sh | sh
 
       - run: |
+          cd wasp
           wasp db migrate-dev
         name: "Build wasp"
 
       - run: |
-          rm -rf ./generated
-          cp -r .wasp/ ./generated
+          rm -rf db
+          rm -rf server
+          rm -rf web-app
+          cp -r .wasp/*
         name: "Updating generated code"
 
       - if: ${{ !(github.event_name == 'push' && github.ref == 'refs/heads/master') }}
@@ -45,6 +48,7 @@ jobs:
 
       - name: Build Wasp Docker Container
         run: |
+          cd wasp
           docker build . -t wasp
 
       - name: Push backend image
