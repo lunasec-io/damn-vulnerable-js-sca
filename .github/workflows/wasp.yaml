@@ -81,5 +81,5 @@ jobs:
         if: steps.branch-name.outputs.current_branch == 'master'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          file_pattern: generated/**
+          file_pattern: '*/**'
           commit_message: "chore: update generated files"
