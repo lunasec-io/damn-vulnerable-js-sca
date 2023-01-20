@@ -33,6 +33,7 @@ jobs:
         name: "Build wasp"
 
       - run: |
+          cd wasp
           rm -rf db
           rm -rf server
           rm -rf web-app
