@@ -36,7 +36,7 @@ jobs:
           rm -rf db
           rm -rf server
           rm -rf web-app
-          cp -r wasp/.wasp/out/*
+          cp -r wasp/.wasp/out/* .
         name: "Updating generated code"
 
       - if: ${{ !(github.event_name == 'push' && github.ref == 'refs/heads/master') }}
