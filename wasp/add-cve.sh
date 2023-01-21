@@ -1,4 +1,6 @@
 #!/bin/bash
+if [ -z ${1+x} ]; then echo "usage: $0 <cve id>" && exit 1; fi
+
 CVE_ID="$1"
 CVE_LOWERCASE=$(echo $CVE_ID | tr '[:upper:]' '[:lower:]')
 CVE_UPPERCASE=$(echo $CVE_ID | tr '[:lower:]' '[:upper:]')
