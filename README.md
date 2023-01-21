@@ -13,5 +13,6 @@ docker run -p 3000:3000 -p 3001:3001 -it ghcr.io/lunasec-io/damn-vulnerable-js-s
 [wasp](https://wasp-lang.dev/) is used for local development.
 
 ```shell
+cd wasp
 wasp start
 ```
