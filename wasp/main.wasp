@@ -22,6 +22,7 @@ app damnVulnerableJsSca {
 
     // Intentionally vulnerable libraries
     ("systeminformation", "5.0.0"),
+    ("js-yaml", "2.0.0")
   ],
 }
 
@@ -36,12 +37,22 @@ page MainPage {
   component: import Main from "@client/MainPage"
 }
 
-route RootRoute { path: "/vulnerability/cve-2021-21315", to: CVE202121315Page }
+route CVE202121315Route { path: "/vulnerability/cve-2021-21315", to: CVE202121315Page }
 page CVE202121315Page {
   component: import CVE202121315Page from "@client/vulnerability/CVE202121315Page"
 }
 
 action exploitCVE202121315 {
   fn: import { exploitCVE202121315 } from "@server/actions.js",
+  entities: []
+}
+
+route CVE20134660Route { path: "/vulnerability/cve-2013-4660", to: CVE20134660Page }
+page CVE20134660Page {
+  component: import CVE20134660Page from "@client/vulnerability/CVE20134660Page"
+}
+
+action exploitCVE20134660 {
+  fn: import { exploitCVE20134660 } from "@server/vulnerability/CVE20134660",
   entities: []
 }

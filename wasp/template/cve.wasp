@@ -1,0 +1,9 @@
+route CVE20134660Route { path: "/vulnerability/${CVE_LOWERCASE}", to: ${CVE}Page }
+page CVE20134660Page {
+  component: import CVE20134660Page from "@client/vulnerability/CVE20134660Page"
+}
+
+action exploitCVE20134660 {
+  fn: import { exploitCVE20134660 } from "@server/vulnerability/CVE20134660",
+  entities: []
+}
