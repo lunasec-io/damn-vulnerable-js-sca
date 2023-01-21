@@ -56,3 +56,13 @@ action exploitCVE20134660 {
   fn: import { exploitCVE20134660 } from "@server/vulnerability/CVE20134660",
   entities: []
 }
+
+route CVE202236067Route { path: "/vulnerability/cve-2022-36067", to: CVE202236067Page }
+page CVE202236067Page {
+  component: import CVE202236067Page from "@client/vulnerability/CVE202236067Page"
+}
+
+action exploitCVE202236067 {
+  fn: import { exploitCVE202236067 } from "@server/vulnerability/CVE202236067",
+  entities: []
+}
