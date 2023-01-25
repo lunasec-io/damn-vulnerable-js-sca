@@ -22,7 +22,10 @@ app damnVulnerableJsSca {
 
     // Intentionally vulnerable libraries
     ("systeminformation", "5.0.0"),
-    ("js-yaml", "2.0.0")
+    ("js-yaml", "2.0.0"),
+    ("puppeteer", "1.12.0"),
+    ("jquery", "3.4.0"),
+    ("safer-eval", "1.3.3")
   ],
 }
 
@@ -43,7 +46,7 @@ page CVE202121315Page {
 }
 
 action exploitCVE202121315 {
-  fn: import { exploitCVE202121315 } from "@server/actions.js",
+  fn: import { exploitCVE202121315 } from "@server/vulnerability/CVE202121315.js",
   entities: []
 }
 
@@ -53,7 +56,7 @@ page CVE20134660Page {
 }
 
 action exploitCVE20134660 {
-  fn: import { exploitCVE20134660 } from "@server/vulnerability/CVE20134660",
+  fn: import { exploitCVE20134660 } from "@server/vulnerability/CVE20134660.js",
   entities: []
 }
 
@@ -63,6 +66,46 @@ page CVE202236067Page {
 }
 
 action exploitCVE202236067 {
-  fn: import { exploitCVE202236067 } from "@server/vulnerability/CVE202236067",
+  fn: import { exploitCVE202236067 } from "@server/vulnerability/CVE202236067.js",
+  entities: []
+}
+
+route CVE20195786Route { path: "/vulnerability/cve-2019-5786", to: CVE20195786Page }
+page CVE20195786Page {
+  component: import CVE20195786Page from "@client/vulnerability/CVE20195786Page"
+}
+
+action exploitCVE20195786 {
+  fn: import { exploitCVE20195786 } from "@server/vulnerability/CVE20195786.js",
+  entities: []
+}
+
+route CVE202011023Route { path: "/vulnerability/cve-2020-11023", to: CVE202011023Page }
+page CVE202011023Page {
+  component: import CVE202011023Page from "@client/vulnerability/CVE202011023Page"
+}
+
+action exploitCVE202011023 {
+  fn: import { exploitCVE202011023 } from "@server/vulnerability/CVE202011023.js",
+  entities: []
+}
+
+route CVE201716082Route { path: "/vulnerability/cve-2017-16082", to: CVE201716082Page }
+page CVE201716082Page {
+  component: import CVE201716082Page from "@client/vulnerability/CVE201716082Page"
+}
+
+action exploitCVE201716082 {
+  fn: import { exploitCVE201716082 } from "@server/vulnerability/CVE201716082.js",
+  entities: []
+}
+
+route CVE201910759Route { path: "/vulnerability/cve-2019-10759", to: CVE201910759Page }
+page CVE201910759Page {
+  component: import CVE201910759Page from "@client/vulnerability/CVE201910759Page"
+}
+
+action exploitCVE201910759 {
+  fn: import { exploitCVE201910759 } from "@server/vulnerability/CVE201910759.js",
   entities: []
 }

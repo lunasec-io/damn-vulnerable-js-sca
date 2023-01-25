@@ -5,6 +5,6 @@ page ${CVE}Page {
 }
 
 action exploit${CVE} {
-  fn: import { exploit${CVE} } from "@server/vulnerability/${CVE}",
+  fn: import { exploit${CVE} } from "@server/vulnerability/${CVE}.js",
   entities: []
 }

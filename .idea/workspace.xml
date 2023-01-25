@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3984310-1117-441d-8455-2a9f5541816c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/standalone/CVE-2021-32820/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/standalone/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wasp/src/client/modules.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wasp/main.wasp" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/main.wasp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wasp/src/client/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/src/client/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wasp/src/client/vulnerability/CVE20134660Page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/src/client/vulnerability/CVE20134660Page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wasp/src/client/vulnerability/CVE202236067Page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/src/client/vulnerability/CVE202236067Page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wasp/src/server/vulnerability/CVE20134660.ts" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/src/server/vulnerability/CVE20134660.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wasp/src/server/vulnerability/CVE202236067.ts" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/src/server/vulnerability/CVE202236067.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wasp/template/cve.wasp" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/template/cve.wasp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/standalone/CVE-2021-32820/package.json" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2KegBq6X63MS1b4iAfm5lXp2Syj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/home/breadchris/projects/lunasec-research/damn-vulnerable-js-sca/wasp/.wasp/out/server/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3984310-1117-441d-8455-2a9f5541816c" name="Changes" comment="" />
+      <created>1674340332080</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674340332080</updated>
+      <workItem from="1674340335617" duration="13000" />
+      <workItem from="1674506955249" duration="16051000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>
