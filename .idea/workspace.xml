@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3984310-1117-441d-8455-2a9f5541816c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/standalone/CVE-2021-32820/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/standalone/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wasp/src/client/modules.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wasp/main.wasp" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/main.wasp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wasp/src/client/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/src/client/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wasp/src/client/vulnerability/CVE20134660Page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/src/client/vulnerability/CVE20134660Page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wasp/src/client/vulnerability/CVE202236067Page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/src/client/vulnerability/CVE202236067Page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wasp/src/server/vulnerability/CVE20134660.ts" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/src/server/vulnerability/CVE20134660.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wasp/src/server/vulnerability/CVE202236067.ts" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/src/server/vulnerability/CVE202236067.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wasp/template/cve.wasp" beforeDir="false" afterPath="$PROJECT_DIR$/wasp/template/cve.wasp" afterDir="false" />
-    </list>
+    <list default="true" id="e3984310-1117-441d-8455-2a9f5541816c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674340332080</updated>
       <workItem from="1674340335617" duration="13000" />
-      <workItem from="1674506955249" duration="16051000" />
+      <workItem from="1674506955249" duration="16356000" />
     </task>
     <servers />
   </component>
